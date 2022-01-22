@@ -1,19 +1,18 @@
 package example;
 
-public class Tiger extends Animal implements Thinkable {
+public class Tiger implements Thinkable {
 
-    public Tiger() {
-        super();
+    private final String t;
+    public Tiger(String t) {
+        this.t = t;
     }
 
-    @Override
-    public String name() {
-        return this.getClass().getSimpleName();
+    public String name(String s) {
+        return s;
     }
 
-    @Override
-    public Integer legCount() {
-        return 4;
+    public Integer legCount(int i) {
+        return i;
     }
 
     @Override

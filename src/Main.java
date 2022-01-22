@@ -1,36 +1,31 @@
 import example.Animal;
-import example.Human;
+import example.Thinkable;
 import example.Tiger;
-import example.generic.Admin;
-import example.generic.Box;
-import example.generic.BoxHandler;
-import example.generic.User;
+import example.generic.*;
 
 public class Main {
     public static void main(String[] args) {
-        Tiger tiger = new Tiger();
-        Human human = new Human();
 
-        System.out.println(tiger.name());
-        System.out.println(tiger.legCount());
-        tiger.extendsClass();
-        tiger.think();
+        SingleTonEnum s1 = SingleTonEnum.IN;
+        SingleTonEnum s2 = SingleTonEnum.IN;
 
-        System.out.println();
+        s1.think();
+        s2.think();
 
-        System.out.println(human.name());
-        System.out.println(human.legCount());
-        human.extendsClass();
-        human.think();
-
-
-        System.out.println("===================================");
-
-        Admin admin = new Admin("userA");
-        Box<User> box = new Box<>();
-        box.setValue(admin);
-        BoxHandler boxHandler = new BoxHandler();
-        boxHandler.get(box);
-        boxHandler.set(box, admin);
+        s1.setUsername("test");
+        System.out.println(s2.getUsername());
+//
+//        Thinkable test = new TigerBaby("TigerBaby");
+//
+//
+//
+//        System.out.println("===================================");
+//
+//        Admin admin = new Admin("userA");
+//        Box<User> box = new Box<>();
+//        box.setValue(admin);
+//        BoxHandler boxHandler = new BoxHandler();
+//        boxHandler.get(box);
+//        boxHandler.set(box, admin);
     }
 }
